@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Apercu";
+  src: url("Apercu-Light.otf");
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("Apercu-Bold.otf");
+  font-weight: bold;
+}
+
+@import "variables.scss";
+@import "bootstrap.scss";
+@import "material.scss";
+
+.card {
+  &.card-catalog {
+    color: $alert-success-text !important;
+    background-color: #f4e2d9;
+
+    .card-header {
+      background-color: darken($color: #f4e2d9, $amount: 10%);
+    }
+  }
+}
+
+.error-message {
+  background-color: #ea0000;
+  color: white;
+  font-weight: 600;
+}
+
+.success-message {
+  background-color: green;
+  color: white;
+  font-weight: 600;
+}
+
+kendo-upload {
+  .k-action-buttons {
+    display: none;
+  }
+}
+
+kendo-pdf-export {
+  .k-grid-header {
+    display: none;
+  }
+
+  .k-grid,
+  .k-grid div,
+  .k-grid table,
+  .k-grid thead,
+  .k-grid tbody,
+  .k-grid th,
+  .k-grid tr,
+  .k-grid td {
+    border: 0 !important;
+  }
+}
+
+/* Grid */
+::ng-deep .k-grid td {
+  padding: 4px 6px !important;
+}
+
+::ng-deep .k-grid {
+  line-height: 1.2 !important;
+}
+
+::ng-deep.k-filtercell .k-filtercell-operator .k-button:not(.k-clear-button-visible) {
+  display: none !important;
+}
